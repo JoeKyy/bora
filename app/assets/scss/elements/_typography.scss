@@ -1,0 +1,63 @@
+h1 {
+    @include font(bold);
+    font-size: font-size(xxxbig)
+}
+
+h2 {
+    @include font(bold);
+    font-size: font-size(xxbig)
+}
+
+h3 {
+    @include font(bold);
+    font-size: font-size(xbig)
+}
+
+h4 {
+    @include font(bold);
+    font-size: font-size(big)
+}
+
+h5 {
+    @include font(bold);
+    font-size: font-size(large)
+}
+
+h6 {
+    @include font(bold);
+    font-size: font-size(medium)
+}
+
+p {
+    @include font(base);
+    font-size: font-size(medium);
+    color: color(dark);
+}
+
+hr {
+    border-top: 3px solid color(primary, darker);
+}
+
+ul {
+    padding-left: space(m);
+
+    li {
+        list-style-type: disc;
+    }
+}
+
+a {
+    color: inherit;
+    &:hover {
+        color: color(primary);
+        text-decoration: underline;
+    }
+}
+
+em {
+    font-style: italic
+}
+
+strong {
+    @include font(bold);
+}

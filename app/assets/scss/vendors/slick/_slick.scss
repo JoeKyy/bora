@@ -1,0 +1,109 @@
+.slick-slider {
+    button {
+        outline: none;
+
+        &.slick-arrow {
+            position: absolute;
+            z-index: 10;
+            top: 0;
+            bottom: 0;
+
+            width: 30px;
+
+            background: inherit;
+            text-rendering: auto;
+            font-size: 0;
+            border: 0;
+            cursor: pointer;
+
+            &.slick-prev {
+                position: absolute;
+                left: 0;
+                margin: auto auto auto (- space(p));
+                &:before {
+                    content: "";
+
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+
+                    width: 0;
+                    height: 0;
+                    margin: auto 0 auto auto;
+
+                    border-top: 10px solid transparent;
+                    border-bottom: 10px solid transparent;
+                    border-right: 10px solid color(light);
+                }
+            }
+            &.slick-next {
+                position: absolute;
+                right: 0;
+                margin: auto (- space(p)) auto auto;
+                &:before {
+                    content: "";
+
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+
+                    width: 0;
+                    height: 0;
+                    margin: auto auto auto 0;
+
+                    border-top: 10px solid transparent;
+                    border-bottom: 10px solid transparent;
+                    border-left: 10px solid color(light);
+                }
+            }
+        }
+    }
+}
+
+.slick-dots {
+    @include responsive(large) {
+        margin: auto auto space(base);
+    }
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    margin: auto auto space(base);
+    width: 230px;
+    height: 25px;
+
+    text-align: center;
+
+    li {
+        @include hidden-text();
+
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        margin-right: space(p);
+
+        background-color: color(primary);
+        border-radius: 50%;
+
+        &.slick-active {
+            background-color: color(primary, darker);
+            
+        }
+
+        button {
+            opacity: 0;
+        }
+    }
+}
+
+.slick-track {
+    display: flex;
+    align-items: center;
+}

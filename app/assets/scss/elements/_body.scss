@@ -1,0 +1,25 @@
+html {
+    @include font(base, $fallback: true);
+    @include responsive(large) {
+        -webkit-overflow-scrolling: inherit;
+        overflow-x: hidden;
+
+        font-size: (font-size(medium, $rem: false));
+    }
+    width: 100%;
+    -webkit-overflow-scrolling: touch;
+    overflow-x: hidden;
+    font-size: (font-size(small, $rem: false));
+    color: color(dark);
+}
+
+body {
+    @include font(base);
+    @include responsive(large) {
+        -webkit-overflow-scrolling: inherit;
+        overflow-x: inherit;
+    }
+    width: 100%;
+    -webkit-overflow-scrolling: touch;
+    overflow-x: hidden;
+}

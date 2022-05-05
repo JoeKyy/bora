@@ -1,0 +1,40 @@
+$lgo-koreain--purple-x: 0px
+$lgo-koreain--purple-y: 0px
+$lgo-koreain--purple-offset-x: 0px
+$lgo-koreain--purple-offset-y: 0px
+$lgo-koreain--purple-width: 260px
+$lgo-koreain--purple-height: 65px
+$lgo-koreain--purple-total-width: 260px
+$lgo-koreain--purple-total-height: 130px
+$lgo-koreain--purple-image: '../assets/images/sprite.png'
+$lgo-koreain--purple: 0px 0px 0px 0px 260px 65px 260px 130px '../assets/images/sprite.png'
+$lgo-koreain--white-x: 0px
+$lgo-koreain--white-y: 65px
+$lgo-koreain--white-offset-x: 0px
+$lgo-koreain--white-offset-y: -65px
+$lgo-koreain--white-width: 260px
+$lgo-koreain--white-height: 65px
+$lgo-koreain--white-total-width: 260px
+$lgo-koreain--white-total-height: 130px
+$lgo-koreain--white-image: '../assets/images/sprite.png'
+$lgo-koreain--white: 0px 65px 0px -65px 260px 65px 260px 130px '../assets/images/sprite.png'
+
+@mixin sprite-width($sprite)
+  width: nth($sprite, 5)
+
+@mixin sprite-height($sprite)
+  height: nth($sprite, 6)
+
+@mixin sprite-position($sprite)
+  $sprite-offset-x: nth($sprite, 3)
+  $sprite-offset-y: nth($sprite, 4)
+  background-position: $sprite-offset-x  $sprite-offset-y
+
+@mixin sprite-image($sprite)
+  background-image: url(nth($sprite, 9))
+
+@mixin sprite($sprite)
+  @include sprite-image($sprite)
+  @include sprite-position($sprite)
+  @include sprite-width($sprite)
+  @include sprite-height($sprite)

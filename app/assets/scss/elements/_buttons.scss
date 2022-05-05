@@ -1,0 +1,114 @@
+a,
+[type="submit"],
+button{
+	&.btn {
+		@include font(medium);
+
+		padding: space(m) space(xg);
+
+		border: none;
+		border-radius: 30px;
+
+		font-size: font-size(large);
+		letter-spacing: 5px;
+		text-align: center;
+		text-transform: uppercase;
+
+		&.btn-red {
+			background-color: color(danger);
+			color: color(light);
+
+			&:hover,
+			&:active,
+			&:focus {
+				background-color: lighten($color: color(light), $amount: 30);
+				color: color(danger);
+			}
+		}
+
+		&.btn-white {
+			background-color: color(light);
+			color: color(primary);
+
+			&:hover,
+			&:active,
+			&:focus {
+				background-color: lighten($color: color(primary), $amount: 30);
+				color: color(light);
+			}
+		}
+
+		&.btn-olive {
+			background-color: color(secondary);
+			color: color(tertiary);
+
+			&:hover,
+			&:active,
+			&:focus {
+				background-color: lighten($color: color(tertiary), $amount: 30);
+				color: color(secondary);
+			}
+		}
+
+		&.btn-blue {
+			background-color: color(primary);
+			color: color(light);
+
+			&:hover,
+			&:active,
+			&:focus {
+				background-color: lighten($color: color(primary), $amount: 30);
+				color: color(light);
+			}
+		}
+
+		// &.btn-primary-inverted {
+		// 	background-color: lighten($color: color(primary, darker), $amount: 30);
+
+		// 	&:hover,
+		// 	&:active,
+		// 	&:focus {
+		// 		background-color: color(primary, darker);
+		// 	}
+		// }
+
+		// &.btn-white {
+		// 	background-color: color(light);
+		// 	color: color(dark);
+
+		// 	&:hover,
+		// 	&:active,
+		// 	&:focus {
+		// 		background-color: lighten($color: color(primary, darker), $amount: 30);
+		// 	}
+
+
+		// 	&.btn-transparent {
+		// 		background-color: transparent;
+		// 		color: color(light);
+
+		// 		border: 2px solid color(light);
+
+		// 		&:hover,
+		// 		&:active,
+		// 		&:focus {
+		// 			background-color: color(light);
+		// 			color: color(dark);
+		// 		}
+		// 	}
+		// }
+
+		// &:hover,
+		// &:active,
+		// &:focus {
+		// 	&.animate {
+		// 		transition-duration: .3s;
+    	// 		transition-property: transform;
+
+		// 		&.rotate-left {
+		// 			transform: scale(1.1) rotate(4deg)
+		// 		}
+		// 	}
+		// }
+	}
+}
