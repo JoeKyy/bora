@@ -142,7 +142,7 @@ form textarea {
   height: 50px;
   margin: 8px 0;
   padding: 16px;
-  background-color: #fafafa;
+  background-color: #f4f4f4;
   border-radius: 8px;
   border: 1px solid;
   color: #9fa3a7; }
@@ -154,14 +154,14 @@ form textarea {
     form textarea::placeholder:hover,
     form textarea::placeholder:active,
     form textarea::placeholder:-internal-autofill-selected {
-      background-color: #fafafa !important;
+      background-color: #f4f4f4 !important;
       color: #9fa3a7; }
   form input:focus, form input:hover, form input:active, form input:-internal-autofill-selected,
   form textarea:focus,
   form textarea:hover,
   form textarea:active,
   form textarea:-internal-autofill-selected {
-    background-color: #fafafa !important;
+    background-color: #f4f4f4 !important;
     color: #9fa3a7; }
 
 form textarea {
@@ -281,7 +281,6 @@ section {
   min-height: 100vh; }
   section.header-highlight {
     position: relative;
-    overflow: hidden;
     width: 100%;
     min-height: 60vh;
     background: no-repeat center bottom url(../images/bg.png);
@@ -299,8 +298,9 @@ section {
       left: 0;
       right: 0;
       bottom: 0;
-      margin: auto auto -150px -80px;
-      background: no-repeat top left url(../images/img-candidato.png); }
+      margin: auto auto -180px -80px;
+      background: no-repeat top left url(../images/img-candidato.png);
+      background-size: 100%; }
       @media (min-width: 48.0625em) {
         section.header-highlight:before {
           display: inline-block;
@@ -312,9 +312,31 @@ section {
           left: 0;
           right: 0;
           bottom: 0;
-          margin: auto auto 0;
-          background: no-repeat center url(../images/img-candidato.png);
+          margin: auto 180px 0 auto;
+          background: no-repeat top center url(../images/img-candidato.png);
           background-size: 100%; } }
+    section.header-highlight:after {
+      display: inline-block;
+      width: 60vw;
+      height: 20vh;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 10;
+      margin: auto 0 -80px auto;
+      background: no-repeat top left url(../images/bg-header.png);
+      background-size: 100%; }
+      @media (min-width: 79.9375em) {
+        section.header-highlight:after {
+          display: inline-block;
+          width: 692px;
+          height: 299px;
+          content: '';
+          margin: auto 0 -100px auto;
+          background-size: inherit; } }
     section.header-highlight .header-highlightContent {
       min-height: 60vh; }
       @media (min-width: 79.9375em) {
@@ -334,7 +356,7 @@ section {
         right: 0;
         bottom: 0;
         transform: scale(0.7);
-        margin: auto auto 50px 0; }
+        margin: auto auto 220px 0; }
         @media (min-width: 48.0625em) {
           section.header-highlight img.img-bora {
             transform: inherit; } }
@@ -345,11 +367,11 @@ section {
         right: 0;
         bottom: 0;
         transform: scale(0.4);
-        margin: auto auto 2vh 30vw; }
+        margin: auto auto 21vh 30vw; }
         @media (min-width: 48.0625em) {
           section.header-highlight img.img-itv {
             transform: inherit;
-            margin: auto auto -40px 420px; } }
+            margin: auto auto 120px 420px; } }
     section.header-highlight svg {
       position: absolute;
       top: 0;
@@ -360,12 +382,42 @@ section {
       width: 100%; }
       section.header-highlight svg#svg-partido {
         max-width: 24%;
-        margin: auto auto 5vh 15vw; }
+        margin: auto auto 24vh 15vw; }
         @media (min-width: 79.9375em) {
           section.header-highlight svg#svg-partido {
-            margin: auto auto -40px 0; } }
+            margin: auto auto 120px 0px; } }
+    section.header-highlight .btn {
+      position: absolute;
+      bottom: 120px;
+      left: 0; }
+      @media (min-width: 79.9375em) {
+        section.header-highlight .btn {
+          bottom: 0; } }
+  section.presentation {
+    min-height: auto;
+    background-color: #9728e5;
+    color: #ffffff; }
+    section.presentation img {
+      margin: 0 0 -8px; }
+    section.presentation h3 {
+      font-family: "Roboto";
+      font-weight: 700;
+      margin: 0 0 24px;
+      color: #ffffff;
+      font-size: 4rem; }
+    section.presentation p {
+      font-size: 2rem;
+      color: #ffffff; }
   section.form {
-    padding: 48px 0; }
+    padding: 48px 0 0;
+    background-color: #4814c5; }
+    section.form .img-bora {
+      margin: -64px 0 -32px; }
+      @media (min-width: 79.9375em) {
+        section.form .img-bora {
+          margin: -112px 0 -56px; } }
+    section.form .formContainer {
+      background-color: #f4f4f4; }
     section.form h2 {
       font-family: "Roboto";
       font-weight: 700;
@@ -435,45 +487,11 @@ section {
         section.video iframe {
           width: 1200px; } }
   section.lead {
-    position: relative;
-    min-height: inherit;
-    padding: 90px 0 300px;
-    background: #7a1860;
-    color: #ffffff; }
-    @media (min-width: 48.0625em) {
-      section.lead {
-        padding: 56px 0; } }
-    section.lead:before {
-      display: inline-block;
-      width: 100vw;
-      height: 40vh;
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      margin: auto auto 0 auto;
-      background: no-repeat top left url(../images/bg-fotos.png);
-      background-size: 100%; }
-      @media (min-width: 48.0625em) {
-        section.lead:before {
-          display: inline-block;
-          width: 51vw;
-          height: 85vh;
-          content: '';
-          margin: auto auto 0 0;
-          background: no-repeat top left url(../images/bg-fotos.png);
-          background-size: 100%; } }
-    section.lead img {
-      position: relative;
-      top: -130px; }
-    section.lead .text {
-      margin-top: -100px; }
-      @media (min-width: 79.9375em) {
-        section.lead .text {
-          padding-top: 56px;
-          margin-top: inherit; } }
+    background: center url(../images/bg-lead.png);
+    background-size: cover; }
+    section.lead .leadContainer {
+      background-color: #006eec;
+      border-radius: 20px; }
     section.lead p {
       margin: 56px 0;
       font-size: 2rem;
@@ -487,11 +505,13 @@ section {
         letter-spacing: inherit; }
   section.action-button {
     position: relative;
-    background: center url(../images/img-paraiba.png);
+    background: center url(../images/bg-cta.png);
     background-size: cover;
     display: flex;
     align-content: center;
     justify-content: center; }
+    section.action-button .row {
+      min-height: 100vh; }
     section.action-button a {
       display: inline-flex;
       align-self: center;

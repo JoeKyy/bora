@@ -3,7 +3,6 @@ section {
 
     &.header-highlight {
         position: relative;
-        overflow: hidden;
 
         width: 100%;
         min-height: 60vh;
@@ -25,9 +24,9 @@ section {
                 right: 0;
                 bottom: 0;
 
-                margin: auto auto 0;
+                margin: auto 180px 0 auto;
 
-                background: no-repeat center url(../images/img-candidato.png);
+                background: no-repeat top center url(../images/img-candidato.png);
                 background-size: 100%;
             }
 
@@ -39,8 +38,32 @@ section {
             right: 0;
             bottom: 0;
 
-            margin: auto auto -150px -80px;
+            margin: auto auto -180px -80px;
             background: no-repeat top left url(../images/img-candidato.png);
+            background-size: 100%;
+        }
+
+        &:after {
+
+            @include responsive(large) {
+                @include generated-content(692px, 299px);
+                margin: auto 0 -100px auto;
+
+                background-size: inherit;
+            }
+
+            @include generated-content(60vw, 20vh);
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 10;
+
+            margin: auto 0 -80px auto;
+            background: no-repeat top left url(../images/bg-header.png);
+            background-size: 100%;
         }
 
         .header-highlightContent {
@@ -72,7 +95,7 @@ section {
                 bottom: 0;
                 transform: scale(.7);
 
-                margin: auto auto 50px 0;
+                margin: auto auto 220px 0;
 
             }
 
@@ -80,7 +103,7 @@ section {
                 @include responsive(medium) {
                     transform: inherit;
 
-                    margin: auto auto -40px 420px;
+                    margin: auto auto 120px 420px;
                 }
 
                 position: absolute;
@@ -90,7 +113,7 @@ section {
                 bottom: 0;
                 transform: scale(0.4);
 
-                margin: auto auto 2vh 30vw;
+                margin: auto auto 21vh 30vw;
             }
         }
 
@@ -107,17 +130,68 @@ section {
 
             &#svg-partido {
                 @include responsive(large) {
-                    margin: auto auto -40px 0;
+                    margin: auto auto 120px 0px;
                 }
 
                 max-width: 24%;
-                margin: auto auto 5vh 15vw;
+                margin: auto auto 24vh 15vw;
             }
+        }
+
+        .btn {
+            @include responsive(large) {
+                bottom: 0;
+            }
+
+            position: absolute;
+            bottom: 120px;
+            left: 0;
+        }
+    }
+
+    &.presentation {
+        min-height: auto;
+
+        background-color: color(tertiary, lighter);
+        color: color(light);
+
+        img {
+            margin: 0 0 (- space(p));
+        }
+
+
+        h3 {
+            @include font(bold);
+
+            margin: 0 0 space(m);
+            color: color(light);
+
+            font-size: font-size(xxxxbig);
+        }
+
+        p {
+            font-size: font-size(xbig);
+            color: color(light);
         }
     }
 
     &.form {
-        padding: space(gg) 0;
+        padding: space(gg) 0 0;
+
+        background-color: color(primary);
+
+
+        .img-bora {
+            @include responsive(large) {
+                margin: (- space(xg) * 2) 0 (- space(xg));
+            }
+
+            margin: (- space(g) * 2) 0 (- space(g));
+        }
+
+        .formContainer {
+            background-color: color(light, darker);
+        }
 
         h2 {
             @include font(bold);
@@ -205,55 +279,13 @@ section {
     }
 
     &.lead {
-        @include responsive(medium) {
-            padding: space(xg) 0;
-        }
+        background: center url(../images/bg-lead.png);
+        background-size: cover;
 
-        position: relative;
+        .leadContainer {
+            background-color: color(primary, lighter);
 
-        min-height: inherit;
-        padding: 90px 0 300px;
-
-        background: color(tertiary);
-        color: color(light);
-
-        &:before {
-            @include responsive(medium) {
-                @include generated-content(51vw, 85vh);
-
-                margin: auto auto 0 0;
-
-                background: no-repeat top left url(../images/bg-fotos.png);
-                background-size: 100%;
-            }
-
-            @include generated-content(100vw, 40vh);
-
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-
-            margin: auto auto 0 auto;
-
-            background: no-repeat top left url(../images/bg-fotos.png);
-            background-size: 100%;
-        }
-
-        img {
-            position: relative;
-            top: -130px;
-        }
-
-        .text {
-            @include responsive(large) {
-                padding-top: space(xg);
-                margin-top: inherit;
-            }
-
-            margin-top: -100px;
-
+            border-radius: 20px;
         }
 
         p {
@@ -277,12 +309,16 @@ section {
 
     &.action-button {
         position: relative;
-        background: center url(../images/img-paraiba.png);
+        background: center url(../images/bg-cta.png);
         background-size: cover;
 
         display: flex;
         align-content: center;
         justify-content: center;
+
+        .row {
+            min-height: 100vh;
+        }
 
         a {
             display: inline-flex;
