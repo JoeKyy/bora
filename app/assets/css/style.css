@@ -521,16 +521,24 @@ section {
       font-size: 1.5rem;
       line-height: 1; }
   section.video {
-    position: relative;
-    background: #e4273e top left url(../images/bg-video.png) no-repeat;
-    background-size: cover; }
+    min-height: inherit; }
+    section.video .bg-color-1 {
+      background-color: #9728e5;
+      color: #ffffff; }
+      section.video .bg-color-1 h3,
+      section.video .bg-color-1 p {
+        color: inherit; }
+      section.video .bg-color-1 h3 {
+        font-family: "Roboto";
+        font-weight: 700;
+        font-size: 3rem; }
+      section.video .bg-color-1 p {
+        font-size: 2.25rem; }
+    section.video .categories {
+      position: relative;
+      bottom: -56px;
+      margin: -56px 0 0; }
     section.video iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      margin: auto;
       width: 80%; }
       @media (min-width: 79.9375em) {
         section.video iframe {
