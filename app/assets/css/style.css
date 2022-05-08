@@ -474,6 +474,52 @@ section {
   100% {
     stroke-dasharray: 89,200;
     stroke-dashoffset: -124; } }
+  section.texts {
+    min-height: auto; }
+    @media (max-width: 48em) {
+      section.texts .container {
+        max-width: 100%;
+        margin: 0;
+        padding: 0; } }
+    @media (min-width: 79.9375em) {
+      section.texts .line-1 {
+        background: #006eec;
+        background: -moz-linear-gradient(left, #006eec 50%, #e5dd00 50%);
+        background: -webkit-linear-gradient(left, #006eec 50%, #e5dd00 50%);
+        background: linear-gradient(to right, #006eec 50%, #e5dd00 50%); } }
+    @media (min-width: 79.9375em) {
+      section.texts .line-2 {
+        background: #e5dd00;
+        background: -moz-linear-gradient(left, #e5dd00 50%, #e4273e 50%);
+        background: -webkit-linear-gradient(left, #e5dd00 50%, #e4273e 50%);
+        background: linear-gradient(to right, #e5dd00 50%, #e4273e 50%); } }
+    section.texts .bg-color-1 {
+      background-color: #006eec;
+      color: #ffffff; }
+      section.texts .bg-color-1 h4,
+      section.texts .bg-color-1 p {
+        color: inherit; }
+    section.texts .bg-color-2 {
+      background-color: #e5dd00;
+      color: #006eec; }
+      section.texts .bg-color-2 h4,
+      section.texts .bg-color-2 p {
+        color: inherit; }
+    section.texts .bg-color-3 {
+      background-color: #e4273e;
+      color: #ffffff; }
+      section.texts .bg-color-3 h4,
+      section.texts .bg-color-3 p {
+        color: inherit; }
+    section.texts h4 {
+      font-family: "Roboto";
+      font-weight: 700;
+      margin: 0 0 32px;
+      font-size: 3rem;
+      line-height: .7; }
+    section.texts p {
+      font-size: 1.5rem;
+      line-height: 1; }
   section.video {
     position: relative;
     background: #e4273e top left url(../images/bg-video.png) no-repeat;

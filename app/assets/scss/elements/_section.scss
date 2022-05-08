@@ -262,6 +262,80 @@ section {
         }
     }
 
+    &.texts {
+        min-height: auto;
+
+        .container {
+            @include responsive(medium, max) {
+                max-width: 100%;
+                margin: 0;
+                padding: 0;
+            }
+        }
+
+        .line-1 {
+            @include responsive(large) {
+                background: color(primary, lighter);
+                background: -moz-linear-gradient(left,  color(primary, lighter) 50%,  color(secondary) 50%);
+                background: -webkit-linear-gradient(left,  color(primary, lighter) 50%, color(secondary) 50%);
+                background: linear-gradient(to right,  color(primary, lighter) 50%, color(secondary) 50%);
+            }
+        }
+
+        .line-2 {
+            @include responsive(large) {
+                background: color(secondary);
+                background: -moz-linear-gradient(left,  color(secondary) 50%,  color(danger) 50%);
+                background: -webkit-linear-gradient(left,  color(secondary) 50%, color(danger) 50%);
+                background: linear-gradient(to right,  color(secondary) 50%, color(danger) 50%);
+            }
+
+        }
+
+        .bg-color-1 {
+            background-color: color(primary, lighter);
+            color: color(light);
+
+            h4,
+            p {
+                color: inherit;
+            }
+        }
+
+        .bg-color-2 {
+            background-color: color(secondary);
+            color: color(primary, lighter);
+
+            h4,
+            p {
+                color: inherit;
+            }
+        }
+
+        .bg-color-3 {
+            background-color: color(danger);
+            color: color(light);
+
+            h4,
+            p {
+                color: inherit;
+            }
+        }
+
+        h4 {
+            @include font(bold);
+
+            margin: 0 0 space(g);
+            font-size: font-size(xxxbig);
+            line-height: .7;
+        }
+
+        p {
+            font-size: font-size(big);
+            line-height: 1;
+        }
+    }
+
     &.video {
         position: relative;
         background: color(danger) top left url(../images/bg-video.png) no-repeat;
