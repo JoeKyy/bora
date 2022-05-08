@@ -86,6 +86,8 @@ section {
             &.img-bora {
                 @include responsive(medium) {
                     transform: inherit;
+
+                    margin: auto auto 220px 0;
                 }
 
                 position: absolute;
@@ -95,7 +97,7 @@ section {
                 bottom: 0;
                 transform: scale(.7);
 
-                margin: auto auto 220px 0;
+                margin: auto auto 180px 0;
 
             }
 
@@ -113,7 +115,7 @@ section {
                 bottom: 0;
                 transform: scale(0.4);
 
-                margin: auto auto 21vh 30vw;
+                margin: auto auto 18vh 30vw;
             }
         }
 
@@ -134,18 +136,21 @@ section {
                 }
 
                 max-width: 24%;
-                margin: auto auto 24vh 15vw;
+                margin: auto auto 21vh 15vw;
             }
         }
 
         .btn {
             @include responsive(large) {
                 bottom: 0;
+
+                transform: inherit;
             }
 
             position: absolute;
-            bottom: 120px;
+            bottom: 80px;
             left: 0;
+            transform: scale(0.8);
         }
     }
 

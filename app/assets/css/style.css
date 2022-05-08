@@ -356,10 +356,11 @@ section {
         right: 0;
         bottom: 0;
         transform: scale(0.7);
-        margin: auto auto 220px 0; }
+        margin: auto auto 180px 0; }
         @media (min-width: 48.0625em) {
           section.header-highlight img.img-bora {
-            transform: inherit; } }
+            transform: inherit;
+            margin: auto auto 220px 0; } }
       section.header-highlight img.img-itv {
         position: absolute;
         top: 0;
@@ -367,7 +368,7 @@ section {
         right: 0;
         bottom: 0;
         transform: scale(0.4);
-        margin: auto auto 21vh 30vw; }
+        margin: auto auto 18vh 30vw; }
         @media (min-width: 48.0625em) {
           section.header-highlight img.img-itv {
             transform: inherit;
@@ -382,17 +383,19 @@ section {
       width: 100%; }
       section.header-highlight svg#svg-partido {
         max-width: 24%;
-        margin: auto auto 24vh 15vw; }
+        margin: auto auto 21vh 15vw; }
         @media (min-width: 79.9375em) {
           section.header-highlight svg#svg-partido {
             margin: auto auto 120px 0px; } }
     section.header-highlight .btn {
       position: absolute;
-      bottom: 120px;
-      left: 0; }
+      bottom: 80px;
+      left: 0;
+      transform: scale(0.8); }
       @media (min-width: 79.9375em) {
         section.header-highlight .btn {
-          bottom: 0; } }
+          bottom: 0;
+          transform: inherit; } }
   section.presentation {
     min-height: auto;
     background-color: #9728e5;
